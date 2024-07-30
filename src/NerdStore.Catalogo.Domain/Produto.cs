@@ -1,5 +1,7 @@
 ﻿using NerdStore.Core.DomainObjects;
 using System.ComponentModel.DataAnnotations;
+using static System.Net.Mime.MediaTypeNames;
+using System.Drawing;
 
 namespace NerdStore.Catalogo.Domain
 {
@@ -65,23 +67,6 @@ namespace NerdStore.Catalogo.Domain
             Validacoes.ValidarSeIgual(CategoriaId, Guid.Empty, "O campo CategoriaId do produto não pode estar vazio");
             Validacoes.ValidarSeMenorQue(Valor, 1, "O campo Valor do produto não pode se menor igual a 0");
             Validacoes.ValidarSeVazio(Imagem, "O campo Imagem do produto não pode estar vazio");
-        }
-    }
-
-    public class Categoria : Entity
-    {
-        public string Nome { get; private set; }
-        public int Codigo { get; private set; }
-
-        public Categoria(string nome, int codigo)
-        {
-            Nome = nome;
-            Codigo = codigo;
-        }
-
-        public override string ToString()
-        {
-            return $"{Nome} - {Codigo}";
         }
     }
 }
