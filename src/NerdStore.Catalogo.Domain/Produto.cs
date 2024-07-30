@@ -37,12 +37,14 @@ namespace NerdStore.Catalogo.Domain
 
         public void AlterarDescricao(string descricao)
         {
+            Validacoes.ValidarSeVazio(descricao, "O campo Descricao do produto não pode estar vazio.");
             Descricao = descricao;
         }
 
         public void DebitarEstoque(int quantidade)
         {
             if (quantidade < 0) quantidade *= -1; //Converte um número negativo para inteiro
+            if (!PossuiEstoque(quantidade)) throw new DomainException("Estoque insuficiente");
             QuantidadeEstoque -= quantidade;
         }
 
