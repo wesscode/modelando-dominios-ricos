@@ -1,4 +1,5 @@
 ﻿using NerdStore.Core.DomainObjects;
+using System.ComponentModel.DataAnnotations;
 
 namespace NerdStore.Catalogo.Domain
 {
@@ -22,6 +23,8 @@ namespace NerdStore.Catalogo.Domain
             Valor = valor;
             DataCadastro = dataCadastro;
             Imagem = imagem;
+
+            Validar();
         }
 
         public void Ativar () => Ativo = true;
@@ -40,7 +43,7 @@ namespace NerdStore.Catalogo.Domain
 
         public void DebitarEstoque(int quantidade)
         {
-            if (quantidade < 0) quantidade *= -1;
+            if (quantidade < 0) quantidade *= -1; //Converte um número negativo para inteiro
             QuantidadeEstoque -= quantidade;
         }
 
@@ -54,9 +57,14 @@ namespace NerdStore.Catalogo.Domain
             return QuantidadeEstoque >= quantidade;
         }
 
+        //Garante a consistência da entidade
         public void Validar()
         {
-
+            Validacoes.ValidarSeVazio(Nome, "O campo Nome do produto não pode estar vazio");
+            Validacoes.ValidarSeVazio(Descricao, "O campo Descricao do produto não pode estar vazio");
+            Validacoes.ValidarSeIgual(CategoriaId, Guid.Empty, "O campo CategoriaId do produto não pode estar vazio");
+            Validacoes.ValidarSeMenorQue(Valor, 1, "O campo Valor do produto não pode se menor igual a 0");
+            Validacoes.ValidarSeVazio(Imagem, "O campo Imagem do produto não pode estar vazio");
         }
     }
 
