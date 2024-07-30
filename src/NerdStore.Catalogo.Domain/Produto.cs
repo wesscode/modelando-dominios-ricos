@@ -1,7 +1,4 @@
 ﻿using NerdStore.Core.DomainObjects;
-using System.ComponentModel.DataAnnotations;
-using static System.Net.Mime.MediaTypeNames;
-using System.Drawing;
 
 namespace NerdStore.Catalogo.Domain
 {
