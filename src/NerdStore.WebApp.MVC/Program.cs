@@ -14,7 +14,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddDbContext<CatalogoContext>(options =>
-    options.UseSqlServer(connectionString));
+        options.UseSqlServer(connectionString, x => x.MigrationsAssembly(typeof(CatalogoContext).Namespace)));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
