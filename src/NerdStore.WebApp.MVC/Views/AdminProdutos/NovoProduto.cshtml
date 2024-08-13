@@ -15,7 +15,7 @@
             <div class="form-group">
                 <label class="control-label">Categoria</label>
                 <select asp-for="CategoriaId" class="form-control" asp-items="@(new SelectList(Model.Categorias, "Id", "Nome"))">
-                    <option></option>
+                    <option>Selecione...</option>
                 </select>
 
                 <span asp-validation-for="CategoriaId" class="text-danger"></span>
