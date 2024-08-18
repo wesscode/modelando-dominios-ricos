@@ -1,5 +1,4 @@
-﻿using FluentValidation.Internal;
-using MediatR;
+﻿using MediatR;
 using NerdStore.Core.Messages;
 using NerdStore.Vendas.Domain;
 
@@ -41,11 +40,7 @@ namespace NerdStore.Vendas.Application.Commands
                 {
                     _pedidoRepository.AdicionarItem(pedidoItem);
                 }
-
-
             }
-
-
             return await _pedidoRepository.UnitOfWork.Commit();
         }
 
