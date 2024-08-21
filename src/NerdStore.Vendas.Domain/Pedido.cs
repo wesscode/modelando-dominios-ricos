@@ -1,5 +1,4 @@
 ﻿using NerdStore.Core.DomainObjects;
-using System.ComponentModel.DataAnnotations;
 
 namespace NerdStore.Vendas.Domain
 {

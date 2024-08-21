@@ -12,7 +12,7 @@ namespace NerdStore.Core.Messages.CommonMessages.Notifications
 
         public Task Handle(DomainNotification notification, CancellationToken cancellationToken)
         {
-        _notifications.Add(notification);
+            _notifications.Add(notification);
             return Task.CompletedTask;
         }
         public virtual List<DomainNotification> ObterNotificacoes()
