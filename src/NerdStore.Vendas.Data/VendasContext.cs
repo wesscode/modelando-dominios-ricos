@@ -34,8 +34,9 @@ namespace NerdStore.Vendas.Infra
                 }
             }
 
-            await _mediatorHandler.PublicarEventos(this);
-            var sucesso = await base.SaveChangesAsync() > 0;
+            var sucesso = await base.SaveChangesAsync() > 0;            
+            if(sucesso) await _mediatorHandler.PublicarEventos(this);
+
             return sucesso;
         }
 
