@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using NerdStore.Catalogo.Domain;
+﻿using System.Reflection;
 using NerdStore.Core.Data;
 using NerdStore.Core.Messages;
-using System.Reflection;
+using NerdStore.Catalogo.Domain;
+using Microsoft.EntityFrameworkCore;
 
-namespace NerdStore.Catalogo.Data
+namespace NerdStore.Catalogo.Infra
 {
     public class CatalogoContext : DbContext, IUnitOfWork
     {
