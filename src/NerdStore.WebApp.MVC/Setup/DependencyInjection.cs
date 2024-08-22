@@ -1,13 +1,14 @@
 ﻿using MediatR;
-using NerdStore.Catalogo.Application.Services;
-using NerdStore.Catalogo.Data.Repository;
+using NerdStore.Vendas.Domain;
 using NerdStore.Catalogo.Domain;
 using NerdStore.Catalogo.Domain.Events;
-using NerdStore.Core.Communication.Mediator;
-using NerdStore.Core.Messages.CommonMessages.Notifications;
-using NerdStore.Vendas.Application.Commands;
 using NerdStore.Vendas.Data.Repository;
-using NerdStore.Vendas.Domain;
+using NerdStore.Catalogo.Data.Repository;
+using NerdStore.Vendas.Application.Events;
+using NerdStore.Core.Communication.Mediator;
+using NerdStore.Vendas.Application.Commands;
+using NerdStore.Catalogo.Application.Services;
+using NerdStore.Core.Messages.CommonMessages.Notifications;
 
 namespace NerdStore.WebApp.MVC.Setup
 {
@@ -30,7 +31,11 @@ namespace NerdStore.WebApp.MVC.Setup
 
             //Vendas
             services.AddScoped<IRequestHandler<AdicionarItemPedidoCommand, bool>, PedidoCommandHandler>();
-            services.AddScoped<IPedidoRepository, PedidoRepository>();                
+            services.AddScoped<IPedidoRepository, PedidoRepository>();
+
+            services.AddScoped<INotificationHandler<PedidoRascunhoIniciadoEvent>, PedidoEventHandler>();
+            services.AddScoped<INotificationHandler<PedidoAtualizadoEvent>, PedidoEventHandler>();
+            services.AddScoped<INotificationHandler<PedidoItemAdicionadoEvent>, PedidoEventHandler>();
         }
     }
 }
