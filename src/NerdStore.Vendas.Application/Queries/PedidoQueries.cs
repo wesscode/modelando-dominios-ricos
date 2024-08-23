@@ -1,4 +1,6 @@
-﻿using NerdStore.Vendas.Application.Queries.ViewModels;
+﻿
+
+using NerdStore.Vendas.Application.Queries.ViewModels;
 using NerdStore.Vendas.Domain;
 
 namespace NerdStore.Vendas.Application.Queries

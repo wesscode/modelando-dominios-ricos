@@ -2,14 +2,14 @@
 using NerdStore.Vendas.Domain;
 using NerdStore.Catalogo.Domain;
 using NerdStore.Catalogo.Domain.Events;
-using NerdStore.Vendas.Data.Repository;
-using NerdStore.Catalogo.Data.Repository;
+using NerdStore.Vendas.Infra.Repository;
+using NerdStore.Catalogo.Infra.Repository;
 using NerdStore.Vendas.Application.Events;
+using NerdStore.Vendas.Application.Queries;
 using NerdStore.Core.Communication.Mediator;
 using NerdStore.Vendas.Application.Commands;
 using NerdStore.Catalogo.Application.Services;
 using NerdStore.Core.Messages.CommonMessages.Notifications;
-using NerdStore.Vendas.Application.Queries;
 
 namespace NerdStore.WebApp.MVC.Setup
 {

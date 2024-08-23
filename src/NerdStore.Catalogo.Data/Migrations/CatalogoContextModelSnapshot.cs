@@ -8,7 +8,7 @@ using NerdStore.Catalogo.Infra;
 
 #nullable disable
 
-namespace NerdStore.Catalogo.Data.Migrations
+namespace NerdStore.Catalogo.Infra.Migrations
 {
     [DbContext(typeof(CatalogoContext))]
     partial class CatalogoContextModelSnapshot : ModelSnapshot

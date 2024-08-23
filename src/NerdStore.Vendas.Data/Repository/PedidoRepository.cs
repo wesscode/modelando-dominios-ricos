@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NerdStore.Core.Data;
 using NerdStore.Vendas.Domain;
-using NerdStore.Vendas.Infra;
 
-namespace NerdStore.Vendas.Data.Repository
+namespace NerdStore.Vendas.Infra.Repository
 {
     public class PedidoRepository : IPedidoRepository
     {

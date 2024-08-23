@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace NerdStore.Catalogo.Data.Migrations
+namespace NerdStore.Catalogo.Infra.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration
