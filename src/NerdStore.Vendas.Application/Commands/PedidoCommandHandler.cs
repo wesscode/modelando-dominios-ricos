@@ -1,13 +1,12 @@
-﻿using FluentValidation.Internal;
-using MediatR;
-using NerdStore.Core.Messages;
-using NerdStore.Vendas.Domain;
-using NerdStore.Core.Extensions;
-using NerdStore.Core.DomainObjects.DTO;
-using NerdStore.Vendas.Application.Events;
+﻿using MediatR;
 using NerdStore.Core.Communication.Mediator;
-using NerdStore.Core.Messages.CommonMessages.Notifications;
+using NerdStore.Core.DomainObjects.DTO;
+using NerdStore.Core.Extensions;
+using NerdStore.Core.Messages;
 using NerdStore.Core.Messages.CommonMessages.IntegrationEvents;
+using NerdStore.Core.Messages.CommonMessages.Notifications;
+using NerdStore.Vendas.Application.Events;
+using NerdStore.Vendas.Domain;
 
 namespace NerdStore.Vendas.Application.Commands
 {

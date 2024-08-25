@@ -6,8 +6,8 @@ using NerdStore.Vendas.Infra.Repository;
 using NerdStore.Catalogo.Infra.Repository;
 using NerdStore.Vendas.Application.Events;
 using NerdStore.Vendas.Application.Queries;
-using NerdStore.Core.Communication.Mediator;
 using NerdStore.Vendas.Application.Commands;
+using NerdStore.Core.Communication.Mediator;
 using NerdStore.Catalogo.Application.Services;
 using NerdStore.Core.Messages.CommonMessages.Notifications;
 
