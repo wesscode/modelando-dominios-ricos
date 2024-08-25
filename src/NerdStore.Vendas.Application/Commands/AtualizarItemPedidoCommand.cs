@@ -42,7 +42,7 @@ namespace NerdStore.Vendas.Application.Commands
 
             RuleFor(c => c.Quantidade)
                 .LessThan(15)
-                .WithMessage("A quantidade máxima de um item é 15");
+                .WithMessage("A quantidade tem que ser menor que 15");
         }
     }
 }
