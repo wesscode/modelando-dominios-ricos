@@ -1,6 +1,7 @@
 ﻿using NerdStore.Core.DomainObjects.DTO;
 using NerdStore.Core.Communication.Mediator;
 using NerdStore.Core.Messages.CommonMessages.Notifications;
+using NerdStore.Core.Messages.CommonMessages.IntegrationEvents;
 
 namespace NerdStore.Pagamentos.Business
 {
@@ -41,7 +42,7 @@ namespace NerdStore.Pagamentos.Business
 
             if (transacao.StatusTransacao == StatusTransacao.Pago)
             {
-                //pagamento.AdicionarEvento(new PagamentoRealizadoEvent(pedido.Id, pagamentoPedido.ClienteId, transacao.PagamentoId, transacao.Id, pedido.Valor));
+                pagamento.AdicionarEvento(new PagamentoRealizadoEvent(pedido.Id, pagamentoPedido.ClienteId, transacao.PagamentoId, transacao.Id, pedido.Valor));
 
                 _pagamentoRepository.Adicionar(pagamento);
                 _pagamentoRepository.AdicionarTransacao(transacao);
@@ -50,8 +51,8 @@ namespace NerdStore.Pagamentos.Business
                 return transacao;
             }
 
-            await _mediatorHandler.PublicarNotificacao(new DomainNotification("pagamento","A operadora recusou o pagamento"));
-            //await _mediatorHandler.PublicarEvento(new PagamentoRecusadoEvent(pedido.Id, pagamentoPedido.ClienteId, transacao.PagamentoId, transacao.Id, pedido.Valor));
+            await _mediatorHandler.PublicarNotificacao(new DomainNotification("Pagamento","A operadora recusou o pagamento"));
+            await _mediatorHandler.PublicarEvento(new PagamentoRecusadoEvent(pedido.Id, pagamentoPedido.ClienteId, transacao.PagamentoId, transacao.Id, pedido.Valor));
 
             return transacao;
         }
