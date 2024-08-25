@@ -2,7 +2,7 @@
 using NerdStore.Core.Data;
 using NerdStore.Vendas.Domain;
 
-namespace NerdStore.Vendas.Data.Repository
+namespace NerdStore.Vendas.Infra.Repository
 {
     public class PedidoRepository : IPedidoRepository
     {

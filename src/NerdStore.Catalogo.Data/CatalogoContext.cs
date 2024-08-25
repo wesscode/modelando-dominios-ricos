@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using NerdStore.Catalogo.Domain;
+﻿using System.Reflection;
 using NerdStore.Core.Data;
-using System.Reflection;
+using NerdStore.Core.Messages;
+using NerdStore.Catalogo.Domain;
+using Microsoft.EntityFrameworkCore;
 
-namespace NerdStore.Catalogo.Data
+namespace NerdStore.Catalogo.Infra
 {
     public class CatalogoContext : DbContext, IUnitOfWork
     {
@@ -17,6 +18,7 @@ namespace NerdStore.Catalogo.Data
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
                 property.SetColumnType("varchar(100)");
 
+            modelBuilder.Ignore<Event>();
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }

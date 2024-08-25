@@ -1,9 +1,10 @@
+using NerdStore.Vendas.Infra;
+using NerdStore.Catalogo.Infra;
+using NerdStore.WebApp.MVC.Data;
+using NerdStore.WebApp.MVC.Setup;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NerdStore.Catalogo.Application.AutoMapper;
-using NerdStore.Catalogo.Data;
-using NerdStore.Vendas.Data;
-using NerdStore.WebApp.MVC.Data;
 using NerdStore.WebApp.MVC.Setup;
 
 var builder = WebApplication.CreateBuilder(args);

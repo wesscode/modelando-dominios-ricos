@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NerdStore.Catalogo.Domain;
 
-namespace NerdStore.Catalogo.Data.Mappings
+namespace NerdStore.Catalogo.Infra.Mappings
 {
     public partial class ProdutoMapping
     {

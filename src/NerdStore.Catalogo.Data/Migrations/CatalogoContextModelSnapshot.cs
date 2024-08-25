@@ -4,11 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NerdStore.Catalogo.Data;
 
 #nullable disable
 
-namespace NerdStore.Catalogo.Data.Migrations
+namespace NerdStore.Catalogo.Infra.Migrations
 {
     [DbContext(typeof(CatalogoContext))]
     partial class CatalogoContextModelSnapshot : ModelSnapshot

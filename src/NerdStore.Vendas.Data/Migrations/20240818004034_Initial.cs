@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace NerdStore.Vendas.Data.Migrations
+namespace NerdStore.Vendas.Infra.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration

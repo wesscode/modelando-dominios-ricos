@@ -55,5 +55,4 @@ namespace NerdStore.Vendas.Application.Commands
                 .WithMessage("O valor do item precisa ser maior que 0");
         }
     }
-
 }
