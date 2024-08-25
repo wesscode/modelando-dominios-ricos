@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NerdStore.Core\NerdStore.Core.csproj" />
+    <ProjectReference Include="..\NerdStore.Pagamentos.Business\NerdStore.Pagamentos.Business.csproj" />
   </ItemGroup>
 
 </Project>
