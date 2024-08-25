@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using FluentValidation.Internal;
+using MediatR;
 using NerdStore.Core.Messages;
 using NerdStore.Vendas.Domain;
 using NerdStore.Core.Extensions;

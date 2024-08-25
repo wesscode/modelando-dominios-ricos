@@ -1,5 +1,5 @@
-﻿using NerdStore.Core.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using NerdStore.Core.Data;
 using NerdStore.Core.Communication.Mediator;
 using NerdStore.Core.Messages;
 using NerdStore.Vendas.Domain;
@@ -34,7 +34,7 @@ namespace NerdStore.Vendas.Infra
                 }
             }
 
-            var sucesso = await base.SaveChangesAsync() > 0;            
+            var sucesso = await base.SaveChangesAsync() > 0;
             if(sucesso) await _mediatorHandler.PublicarEventos(this);
 
             return sucesso;

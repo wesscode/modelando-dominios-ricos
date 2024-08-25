@@ -129,5 +129,5 @@ namespace NerdStore.WebApp.MVC.Controllers
 
             return View("ResumoDaCompra", await _pedidoQueries.ObterCarrinhoCliente(ClienteId));
         }
-    }
+   }
 }
