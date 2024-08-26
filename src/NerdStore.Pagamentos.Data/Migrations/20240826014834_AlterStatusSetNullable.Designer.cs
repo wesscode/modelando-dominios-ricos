@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NerdStore.Pagamentos.Data;
 
@@ -11,9 +12,11 @@ using NerdStore.Pagamentos.Data;
 namespace NerdStore.Pagamentos.Data.Migrations
 {
     [DbContext(typeof(PagamentoContext))]
-    partial class PagamentoContextModelSnapshot : ModelSnapshot
+    [Migration("20240826014834_AlterStatusSetNullable")]
+    partial class AlterStatusSetNullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

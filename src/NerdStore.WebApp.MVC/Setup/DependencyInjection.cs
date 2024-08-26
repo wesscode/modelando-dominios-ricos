@@ -14,6 +14,7 @@ using NerdStore.Pagamentos.Business;
 using NerdStore.Pagamentos.Data.Repository;
 using NerdStore.Pagamentos.AntiCorruption;
 using NerdStore.Core.Messages.CommonMessages.IntegrationEvents;
+using NerdStore.Pagamentos.Business.Events;
 
 namespace NerdStore.WebApp.MVC.Setup
 {
@@ -60,6 +61,8 @@ namespace NerdStore.WebApp.MVC.Setup
             services.AddScoped<IPagamentoCartaoCreditoFacade, PagamentoCartaoCreditoFacade>();
             services.AddScoped<IPayPalGateway, PayPalGateway>();
             services.AddScoped<IConfigManager,ConfigManager>();
+
+            services.AddScoped<INotificationHandler<PedidoEstoqueConfirmadoEvent>, PagamentoEventHandler>();
         }
     }
 }

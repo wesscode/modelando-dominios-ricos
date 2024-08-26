@@ -5,7 +5,7 @@ namespace NerdStore.Pagamentos.Business
     public class Pagamento : Entity, IAggregateRoot
     {
         public Guid PedidoId { get; set; }
-        public string Status { get; set; }
+        public string? Status { get; set; }
         public decimal Valor { get; set; }
 
         public string NomeCartao { get; set; }
