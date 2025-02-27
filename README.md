@@ -79,6 +79,6 @@ O quanto é importante saber em que ordem os itens foram adicionados ?
 - É possível realizar o "Replay" para conhecer o estado anterior da entidade
 
 
-## Técnica Sobre o app:
-**Services:** Modelagem dos nossos contextos </br>
-**WebApp:** Aplicações webs(apresentation)
+## Organização app:
+  - **Services:** Modelagem dos nossos contextos
+  - **WebApp:** Aplicações webs(apresentation)
