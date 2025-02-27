@@ -30,7 +30,7 @@ Desenvolvimento voltado para o domínio, onde amadurecemos o modelo expressando 
 - A entidade tem que se validar, não pode ser criada de forma inválida, tem que ter o setters privados, deve possuir seus comportamentos.
 - Trabalhe com serviço de domínio com ações conhecidas pela sua linguagem ubíqua, todo serviço de domínio tem que ser conhecido e aprovado pelo o Domain Expert.
 
-# Teorema CAP:
+## Teorema CAP:
   - **Consistency:** Garantia da consistência dos dados.
   - **Availability:** Escalabilidade e disponibilidade onde garante que o app, não pare e retorne o dado mesmo que seja o mais antigo, mas estará disponível.
   - **Partition Tolerance:** Replicação de várias instâncias que mesmo que partes do app falhe, outras continuem funcionando.
@@ -46,7 +46,7 @@ Desenvolvimento voltado para o domínio, onde amadurecemos o modelo expressando 
 
   _Esse padrão aborda a consistência eventual seguindo o teorema CAP._
     
-## EVENTO X COMMANDS
+## Eventos X Commands
   - **Comandos:** Expressam "intenções" de negócio, ações únicas que representam um "use case" e registram no banco.
   Ex: AdicionarNovoClienteCommand
       InativarProdutoCommand
@@ -66,7 +66,7 @@ O padrão Saga é um padrão de design de arquitetura usado para gerenciar trans
 
 Aplicável para apps distribuídos em rede. Ex: Mensageria como RabbitMQ e Apache Kafka.
 
-# Event Sourcing
+## Event Sourcing
 Guardar a histórias de nossas entidades
 Ajuda em: Entender o comportamento do usuário a partir dos eventos gerados de cada ação do usuário.
 O quanto é importante saber em que ordem os itens foram adicionados ?
@@ -79,6 +79,6 @@ O quanto é importante saber em que ordem os itens foram adicionados ?
 - É possível realizar o "Replay" para conhecer o estado anterior da entidade
 
 
-# Técnica Sobre o app:
-**Services:** Modelagem dos nossos contextos
+## Técnica Sobre o app:
+**Services:** Modelagem dos nossos contextos </br>
 **WebApp:** Aplicações webs(apresentation)
