@@ -82,3 +82,20 @@ O quanto é importante saber em que ordem os itens foram adicionados ?
 ## Organização app:
   - **Services:** Modelagem dos nossos contextos
   - **WebApp:** Aplicações webs(apresentation)
+
+## Execução comandos EFCore:
+
+- Package Manager Console:
+
+- Adicionar
+
+        Add-migration -Context CatalogoContext
+- Remover
+  
+        Remove-Migration -Context
+
+- CLI:
+
+- Adicionar
+  
+        dotnet ef migrations add newcolumn --project src/NerdStore.Catalogo.Infra --startup-project src/NerdStore.WebApp.MVC --context CatalogoContext
